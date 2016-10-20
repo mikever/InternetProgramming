@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Greg's Gambits | Game of 21</title>
+<link href="greg.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+		var playerTotal = 0;
+		var dealerTotal = 0;
+		var playerCard = 0;
+		var dealerCard1 = 0;
+		var dealerCard2 = 0;
+
+		function dealMe()
+		{
+			dealerCard1 = Math.floor(Math.random() * (11-2+1) + 2);
+			dealerCard2 = Math.floor(Math.random() * (11-2+1) + 2);
+			playerCard = Math.floor(Math.random() * (11-2+1) + 2);
+
+			playerTotal += playerCard;
+			dealerTotal = dealerCard1 + dealerCard2;
+
+			while (dealerTotal < 15)
+			{
+				dealerTotal = dealerTotal + Math.floor(Math.random() * (11-2+1) + 2);
+			}
+
+			document.getElementById("playerCard").innerHTML = ("Current card: " + playerCard);
+			document.getElementById("playerScore").innerHTML = ("<span class='style3'>" + playerTotal + "</span>");
+		}
+
+		function stayHand()
+		{
+			document.getElementById("dealerScore").innerHTML = ("<span class='style3'>" + dealerTotal + "</span>");
+
+			if (playerTotal > 21)
+			{
+				document.getElementById("result").innerHTML = ("You went over 21 and busted. Try again.");
+			}
+			else if (dealerTotal > 21)
+			{
+				document.getElementById("result").innerHTML = ("The dealer busted! You win!");
+			}
+			else if (playerTotal > dealerTotal)
+			{
+				document.getElementById("result").innerHTML = ("You beat the dealer's score. You win!");
+			}
+			else if (playerTotal < dealerTotal)
+			{
+				document.getElementById("result").innerHTML = ("The dealer beat your score. You lose. Try again.");
+			}
+			else
+				document.getElementById("result").innerHTML = ("It's a draw! Try again.");
+		}
+</script>
+</head>
+
+<body>
+<div id="container">
+	 <img src="images/superhero.jpg" class="floatleft" />
+	 <h1 id="logo"><em>A Game of 21</em></h1>
+	 <div id="nav">
+	 	  <p><a href="index.html">Home</a>
+	 	  <a href="greg.html">About Greg</a>
+	 	  <a href="playagame.html">Play a Game</a>
+	 	  <a href="sign.html">Sign In</a>
+	 	  <a href="contact.html">Contact Us</a></p>
+	</div>
+	<div id="content">
+		<table width="85%" cellspacing="0" cellpadding="5" border="0" id="battleTable">
+			<tr>
+				<td colspan="4"><span class="style1">In this game you and the dealer will both get dealt cards with a value from 2 to 11. The goal is to get your total score as close to 21 without going over. The computer will generate random numbers between 2 and 11 for the player and the dealer. The player will be asked whether they want to hit (get another card) or stand (stay with the score they have and compare total scores). The dealer will be dealt two cards initially, and then the dealer may get another card if the total is low. The dealer's score will be hidden until the reveal at the end. Good luck!</span></td>
+			</tr>
+			<tr>
+				<td colspan="2" width="40%"><p><span class="style2">Player Score</span></p></td>
+				<td colspan="2" width="40%"><p><span class="style2">Dealer Score</span></p></td>
+			</tr>
+			<tr>
+				<td colspan="2" width="40%" id="playerScore"><p><span class="style3">0</span></p></td>
+				<td colspan="2" width="40%" id="dealerScore"><p><span class="style3">???</span></p></td>
+			</tr>
+			<tr>
+				<td width="40%" id="playerCard"><p><span class="style1">&nbsp;</span></p></td>
+				<td width="40%" id="dealerCard"><p><span class="style1">&nbsp;</span></p></td>
+			</tr>
+			<tr>
+				<td colspan="4"><span class="style1" id="result">&nbsp;</span></td>
+			</tr>
+			<tr>
+				<td colspan="2"><span class="style1"><input type="button" id="startGame" value="Deal a Card" onclick="dealMe()";></span></td>
+				<td colspan="2"><span class="style1"><input type="button" id="stayHand" value="Stand (end and compare scores)" onclick="stayHand()";></span></td>
+			</tr>
+			<tr>
+				<td colspan="4"><span class="style1"><input type="button" id="reloadPage" value="Restart the Game" onclick="location.href='game21.html'";></span></td>
+			</tr>
+		</table>
+	</div>
+	<div id="footer">Copyright &copy; 2016 Greg's Gambits<br /> <a href="mailto:mike@ggambits.com"> mike@ggambits.com</a>
+	</div>
+</div>
+</body>
+</html>
