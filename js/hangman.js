@@ -58,7 +58,7 @@ function startHangman () {
   var goodGuess = false;
 
   for (var i = 0; i < lgth; i++) {
-    newWord = newWord + "_";
+    newWord = newWord + "_ ";
   }
 
   document.getElementById("noose").innerHTML = ("<img src = 'images/hangman0.gif'");

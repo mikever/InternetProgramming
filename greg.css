@@ -238,3 +238,143 @@ table caption {
 #ticTacToeResult p {
 	color: #AA4C4C;
 }
+
+#playerHed {
+  display: inline-block;
+  width: 200px;
+  margin-right: 100px;
+}
+
+#playerHed h2 {
+  color: #95e8a2;
+}
+
+#dealerHed h2 {
+  color: #AA4C4C;
+}
+
+#dealerHed {
+  display: inline-block;
+  width: 200px;
+}
+
+#playerDice1 {
+  height: 124px;
+  width: 124px;
+  background-position: -6px -131px;
+  display: inline-block;
+}
+
+#playerDice2 {
+  height: 124px;
+  width: 124px;
+  background-position: -6px -131px;
+  display: inline-block;
+  margin-right: 50px;
+}
+
+#dealerDice1 {
+  height: 124px;
+  width: 124px;
+  background-position: -6px -131px;
+  display: inline-block;
+}
+
+#dealerDice2 {
+  height: 124px;
+  width: 124px;
+  background-position: -6px -131px;
+  display: inline-block;
+}
+
+#playerDice1, #playerDice2, #dealerDice1, #dealerDice2 {
+  background-image: url('images/dice.png');
+  background-repeat: no-repeat;
+}
+
+#playerScore {
+  display: inline-block;
+  width: 200px;
+  margin-right: 100px;
+}
+
+#playerScore h2 {
+  color: #95e8a2;
+  font-size: .8em;
+}
+
+#dealerScore h2 {
+  color: #AA4C4C;
+  font-size: .8em;
+}
+
+#dealerScore {
+  display: inline-block;
+  width: 200px;
+}
+
+#playerResult {
+  display: inline-block;
+}
+
+#dealerResult {
+  display: inline-block;
+}
+
+#playerResult h2 {
+  display: inline-block;
+  width: 250px;
+  color: #ffffff;
+  font-size: 1.2em;
+  margin-right: 50px;
+}
+
+#dealerResult h2 {
+  display: inline-block;
+  width: 250px;
+  color: #ffffff;
+  font-size: 1.2em;
+}
+
+#statusText h2 {
+  color: #ffffff;
+  font-size: 1em;
+}
+
+
+#diceContent {
+  width: 650px;
+	margin-left: 150px;
+	padding: 30px;
+	overflow:auto;
+	border: medium groove #88FFFF;
+	line-height: 135%;
+}
+
+button {
+  cursor: pointer;
+}
+
+.dice1 {
+  background-position: -7px -4px;
+}
+
+.dice2 {
+  background-position: -134px -4px;
+}
+
+.dice3 {
+  background-position: -261px -4px;
+}
+
+.dice4 {
+  background-position: -259px -130px;
+}
+
+.dice5 {
+  background-position: -133px -130px;
+}
+
+.dice6 {
+  background-position: -6px -131px;
+}
