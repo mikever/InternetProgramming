@@ -124,8 +124,9 @@ table {
  	margin: auto;
 }
 
-
-
+#15Table {
+  width: 60%;
+}
 
 tr {
   width: auto;
