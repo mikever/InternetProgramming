@@ -78,7 +78,6 @@ function startHangman () {
     win = checkWord(word, newWord);
     if (win === true) {
       document.getElementById("result").innerHTML = ("You win!");
-      document.getElementById("noose").innerHTML = ("<img src='" + picture + "'>");
     } else if (win === false) {
       document.getElementById("result").innerHTML = ("Not a winner yet");
       if (goodGuess === false) {
