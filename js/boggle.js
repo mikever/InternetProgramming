@@ -3,19 +3,23 @@ function boggle() {
   var score = 0;
   var flag = 0;
   var num = Math.floor(Math.random() * 5) + 1;
-  compWords = new array;
-  notAWord = new array;
-  playWords = new array();
+  var compWords = [];
+  var notAWord = [];
+  var playWords = [];
   compWords = words(num);
   yourWord = compWords[0];
 
-  document.GetElementById("letters").innerHTML = yourWord;
+  setTimeout(function(){
+    alert("Sorry, your time has run out.");
+  }, 30000);
+
+  document.getElementById("letters").innerHTML = yourWord;
   // Get player entries
-  while (play !== "Q" && play !== "q") {
+  while ((play !== "Q") && (play !== "q")) {
     play = prompt("Enter a word, or enter 'Q' when done.");
     playWords.push(play);
     if (play !== "Q" && play !== "q") {
-      document.GetElementById("entries").innerHTML = playWords.toString();
+      document.getElementById("entries").innerHTML = playWords.toString();
     }
   }
 
@@ -34,7 +38,7 @@ function boggle() {
       notAWord.push(playWords[i]);
     }
   }
-  document.GetElementById("result").innerHTML = ("Your score is " +
+  document.getElementById("result").innerHTML = ("Your score is " +
   score + ". The following entries are not valid words: <br>" +
   notAWord.toString());
 }

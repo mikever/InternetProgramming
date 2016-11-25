@@ -1,5 +1,4 @@
 body { background-color: #000040;
-       background-image: url(background.gif);
        color: #88ffff;
        font-family: Verdana, Arial, sans-serif;
 }
@@ -378,4 +377,30 @@ button {
 
 .dice6 {
   background-position: -6px -131px;
+}
+
+#conTableTop td, #conTableBottom td {
+  text-align: center;
+}
+
+#conTableTop td:hover {
+  cursor: pointer;
+}
+
+#conTableBottom td:hover {
+  cursor: pointer;
+}
+
+#theEnd {
+  text-align: center;
+}
+
+#theEnd h2 {
+  color: rgb(215, 195, 107);
+}
+
+#conInstruct {
+  font-weight: bold;
+  text-align: center;
+  color: rgb(215, 195, 107);
 }
