@@ -105,10 +105,6 @@ function checkForWin () {
   if (matchCount === 10) {
     document.getElementById("theEndH2").innerHTML = "<h2>Contratulations, you won!</h2> </p><button onclick='playAgain()'>Play again?</button>"
     document.getElementById("theEndP").innerHTML = "<p>It took you " + totalClicks + " clicks. A perfect score is 10, but you would have to get very lucky."
-    var win = document.createElement("H2");
-    var winMessage = document.createTextNode("You matched them all!");
-    win.appendChild(winMessage);
-    document.getElementById(theEnd).appendChild(win);
   }
 }
 
