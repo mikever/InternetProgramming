@@ -7,7 +7,7 @@ var totalClicks = 0;
 var topClicked = false;
 
 // Get random int in range from min to max
-function getRandomInt(min, max) {
+function getRandomInt (min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
@@ -39,7 +39,7 @@ function setup () {
   ];
 
   // Randomize an array passed as argument
-  function randomizeArray(arr) {
+  function randomizeArray (arr) {
     for (var i = arr.length - 1; i > 0; i--) {
         var r = getRandomInt(0,i);
         var tmp = arr[i];
@@ -103,7 +103,7 @@ function match () {
 function checkForWin () {
   matchCount++;
   if (matchCount === 10) {
-    document.getElementById("theEndH2").innerHTML = "<h2>Contratulations, you won!</h2> </p><button onclick='playAgain()'>Play again?</button>"
+    document.getElementById("theEndH2").innerHTML = "<h2>Contratulations, you won!</h2> </p><button class='buttons' onclick='playAgain()'>Play again?</button>"
     document.getElementById("theEndP").innerHTML = "<p>It took you " + totalClicks + " clicks. A perfect score is 10, but you would have to get very lucky."
   }
 }

@@ -1,61 +1,75 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Greg's Gambits | Dice Game</title>
-<link href="greg.css" rel="stylesheet" type="text/css" />
+	<meta charset="UTF-8">
+	<title>Greg's Gambits</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="gregnew.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <script type="text/javascript" src="js/dicegame.js"></script>
-<script type="text/javascript">
-</script>
 </head>
-
 <body>
-<div id="container">
-	 <img src="images/superhero.jpg" class="floatleft" />
-	 <h1 id="logo"><em>Dice Game</em></h1>
-	 <div id="nav">
-	 	  <p><a href="index.html">Home</a>
-	 	  <a href="greg.html">About Greg</a>
-	 	  <a href="playagame.html">Play a Game</a>
-	 	  <a href="sign.html">Sign In</a>
-	 	  <a href="contact.html">Contact Us</a></p>
-	</div>
-	<div id="diceContent">
+	<header>
+		<a href="index.html" id="logo" class="grow"></a>
+		<nav>
+			<ul>
+				<li><a href="index.html" class="current">Home</a></li>
+				<li><a href="greg.html">About this Site</a></li>
+				<li><a href="playagame.html">Play a Game</a></li>
+				<li><a href="aboutyou.html">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="spacer">&nbsp;</div>
+	<main>
+		<h1>Dice Game</h1>
 		<p>The goal of this game is to get to 100 points before the dealer does. Whoever has the higher dice total for the roll adds that roll to their total score. If a player's two die match, the score is doubled.</p>
-    <div id="playerHed">
-      <h2>Player</h2>
-    </div>
-    <div id="dealerHed">
-      <h2>Dealer</h2>
-    </div>
-    <br>
-    <div id="playerDice1"></div>
-    <div id="playerDice2"></div>
-    <div id="dealerDice1"></div>
-    <div id="dealerDice2"></div>
+		<br>
+		<div class="container">
+			<div id="diceContent">
+		    <div id="playerHed">
+		      <h2>Player</h2>
+		    </div>
+		    <div id="dealerHed">
+		      <h2>Dealer</h2>
+		    </div>
+		    <br>
+		    <div id="playerDice1"></div>
+		    <div id="playerDice2"></div>
+		    <div id="dealerDice1"></div>
+		    <div id="dealerDice2"></div>
 
-    <div id="playerResult">
-      <h2>&nbsp;</h2>
-    </div>
-    <div id="dealerResult">
-      <h2>&nbsp;</h2>
-    </div>
+		    <div id="playerResult">
+		      <h2>&nbsp;</h2>
+		    </div>
+		    <div id="dealerResult">
+		      <h2>&nbsp;</h2>
+		    </div>
 
-    <div id="playerScore">
-      <h2>Player Score: 0</h2>
-    </div>
-    <div id="dealerScore">
-      <h2>Dealer Score: 0</h2>
-    </div>
+		    <div id="playerScore">
+		      <h2>Player Score: 0</h2>
+		    </div>
+		    <div id="dealerScore">
+		      <h2>Dealer Score: 0</h2>
+		    </div>
 
-    <div id="statusText">
-      <h2>&nbsp;</h2>
+		    <div id="statusText">
+		      <h2>&nbsp;</h2>
+		    </div>
+		    <br>
+			</div>
     </div>
-    <br>
-    <button type="button" name="rollDice" onclick="rollDice();">Roll Dice</button>
-    <button type="button" name="restartGame" onclick="location.href='gregs_dice.html'">Restart Game</button>
-	</div>
-	<div id="footer">Copyright &copy; 2016 Greg's Gambits<br /> <a href="mailto:mike@ggambits.com"> mike@ggambits.com</a>
-	</div>
-</div>
+		<br>
+		<div class="container">
+			<button type="button" class="buttons" name="rollDice" onclick="rollDice();">Roll Dice</button>
+			<button type="button" class="buttons" name="restartGame" onclick="location.href='gregs_dice.html'">Restart Game</button>
+		</div>
+		<br>
+	<footer>
+		<p>Copyright &copy; 2016 Greg's Gambits | <a href="mailto:mike@ggambits.com">mike@ggambits.com</a></p>
+		<br>
+		<br>
+	</footer>
+
 </body>
 </html>

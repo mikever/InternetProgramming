@@ -1,74 +1,89 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Greg's Gambits | Greg's Encoder</title>
-<link href="greg.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript">
-		function encodeIt()
-		{
-			document.getElementById("message").innerHTML = ("<h2>&nbsp;");
-			var msg = prompt("Enter your message." , " ");
-			var newmsg = " ";
-			var upCaseCode = 155;
-			var newCode = 0;
-			var lowCaseCode = 219;
-			var specialCode = 3;
-			// The loop encodes each letter in the message string
-			for (var j = 0; j < msg.length; j++)
+	<meta charset="UTF-8">
+	<title>Greg's Gambits</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="gregnew.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<script type="text/javascript">
+			function encodeIt()
 			{
-				// Check for uppercase letters and encode them
-				if ((msg.charCodeAt(j)>=65) && (msg.charCodeAt(j) <=90))
+				document.getElementById("message").innerHTML = ("<h2>&nbsp;");
+				var msg = prompt("Enter your message." , " ");
+				var newmsg = " ";
+				var upCaseCode = 155;
+				var newCode = 0;
+				var lowCaseCode = 219;
+				var specialCode = 3;
+				// The loop encodes each letter in the message string
+				for (var j = 0; j < msg.length; j++)
 				{
-					newcode = (upCaseCode - msg.charCodeAt(j));
-				}
-				else
-					// Check for lowercase letters and encode them
-					if ((msg.charCodeAt(j)>=97) && (msg.charCodeAt(j) <=122))
+					// Check for uppercase letters and encode them
+					if ((msg.charCodeAt(j)>=65) && (msg.charCodeAt(j) <=90))
 					{
-						newcode = (lowCaseCode - msg.charCodeAt(j));
+						newcode = (upCaseCode - msg.charCodeAt(j));
 					}
 					else
-						// Check for numbers and special characters and encode them
-						if (((msg.charCodeAt(j) > 90) && (msg.charCodeAt(j) < 97)) || (msg.charCodeAt(j) < 65))
+						// Check for lowercase letters and encode them
+						if ((msg.charCodeAt(j)>=97) && (msg.charCodeAt(j) <=122))
 						{
-							newcode = (msg.charCodeAt(j) + specialCode);
+							newcode = (lowCaseCode - msg.charCodeAt(j));
 						}
-						// Add each encoded character to the new message
-						newmsg = newmsg + " " + String.fromCharCode(newcode);
+						else
+							// Check for numbers and special characters and encode them
+							if (((msg.charCodeAt(j) > 90) && (msg.charCodeAt(j) < 97)) || (msg.charCodeAt(j) < 65))
+							{
+								newcode = (msg.charCodeAt(j) + specialCode);
+							}
+							// Add each encoded character to the new message
+							newmsg = newmsg + " " + String.fromCharCode(newcode);
+				}
+				// Display encoded message on the Web page
+				document.getElementById("secret").innerHTML = ("<h2>" + newmsg + "</h2");
+				// Decide if original message should be shown
+				var choice = prompt("Do you want the original message to be displayed? Yes or No?", " ");
+				if ((choice.charAt(0) == 'y') || (choice.charAt(0) == 'Y'))
+				{
+					document.getElementById("message").innerHTML = ("<h2>" + msg + "</h2>");
+				}
 			}
-			// Display encoded message on the Web page
-			document.getElementById("secret").innerHTML = ("<h2>" + newmsg + "</h2");
-			// Decide if original message should be shown
-			var choice = prompt("Do you want the original message to be displayed? Yes or No?", " ");
-			if ((choice.charAt(0) == 'y') || (choice.charAt(0) == 'Y'))
-			{
-				document.getElementById("message").innerHTML = ("<h2>" + msg + "</h2>");
-			}
-		}
-</script>
+	</script>
 </head>
-
 <body>
-<div id="container">
-	 <img src="images/superhero.jpg" class="floatleft" />
-	 <h1 id="logo"><em>The Secret Message Encoder</em></h1>
-	 <div id="nav">
-	 	  <p><a href="index.html">Home</a>
-	 	  <a href="greg.html">About Greg</a>
-	 	  <a href="playagame.html">Play a Game</a>
-	 	  <a href="sign.html">Sign In</a>
-	 	  <a href="contact.html">Contact Us</a></p>
-	</div>
-	<div id="content">
-		<h2>Write A Message And Encode It</h2>
-		<p><input type="button" id="encode" value="Enter your message" onclick="encodeIt();"></p>
-		<table cellpadding="2" align="center" border="1">
-			<tr><td align="center" id="secret"><p>encoded message</p></td></tr>
-			<tr><td align="center" id="message">&nbsp;</td></tr>
-		</table>
-	</div>
-	<div id="footer">Copyright &copy; 2016 Greg's Gambits<br /> <a href="mailto:mike@ggambits.com"> mike@ggambits.com</a>
-	</div>
-</div>
+	<header>
+		<a href="index.html" id="logo" class="grow"></a>
+		<nav>
+			<ul>
+				<li><a href="index.html" class="current">Home</a></li>
+				<li><a href="greg.html">About this Site</a></li>
+				<li><a href="playagame.html">Play a Game</a></li>
+				<li><a href="aboutyou.html">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="spacer">&nbsp;</div>
+	<main>
+		<h1>The Secret Message Encoder</h1>
+		<h2 class="centeredh2">Write a message and encode it</h2>
+		<br>
+		<div class="container">
+			<div id="content">
+				<input type="button" class="buttons" id="encode" value="Enter your message" onclick="encodeIt();">
+			</div>
+    </div>
+		<div class="container">
+			<table cellpadding="2" align="center" border="1">
+				<tr><td align="center" id="secret"><p>encoded message</p></td></tr>
+				<tr><td align="center" id="message">&nbsp;</td></tr>
+			</table>
+		</div>
+		<br>
+	<footer>
+		<p>Copyright &copy; 2016 Greg's Gambits | <a href="mailto:mike@ggambits.com">mike@ggambits.com</a></p>
+		<br>
+		<br>
+	</footer>
+
 </body>
 </html>

@@ -1,78 +1,88 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Greg's Gambits | Concentration</title>
-<link href="greg.css" rel="stylesheet" type="text/css" />
+	<meta charset="UTF-8">
+	<title>Greg's Gambits</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="gregnew.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <script type="text/javascript" src="js/concentration.js"></script>
-<script type="text/javascript">
-
-</script>
 </head>
-
 <body onload="setup()">
-<div id="container">
-	 <img src="images/superhero.jpg" class="floatleft" />
-	 <h1 id="logo"><em>Greg's Concentration</em></h1>
-	 <div id="nav">
-	 	  <p><a href="index.html">Home</a>
-	 	  <a href="greg.html">About Greg</a>
-	 	  <a href="playagame.html">Play a Game</a>
-	 	  <a href="sign.html">Sign In</a>
-	 	  <a href="contact.html">Contact Us</a></p>
-	</div>
-	<div id="content">
-		<p id="conInstruct">Select a red card and try to match the image to a blue card.</p>
-    <div id="pictures">
-      <table align="center" border="1" id="conTableTop">
-        <tr>
-          <td colspan="6">Click a card to reveal an image.</td>
-        </tr>
-        <tr>
-          <td><img src="images/redcard.png" id="t0" onclick="getTopImage('t0', 0)">
-          <td><img src="images/redcard.png" id="t1" onclick="getTopImage('t1', 1)">
-          <td><img src="images/redcard.png" id="t2" onclick="getTopImage('t2', 2)">
-          <td><img src="images/redcard.png" id="t3" onclick="getTopImage('t3', 3)">
-          <td><img src="images/redcard.png" id="t4" onclick="getTopImage('t4', 4)">
-        </tr>
-        <tr>
-          <td><img src="images/redcard.png" id="t5" onclick="getTopImage('t5', 5)">
-          <td><img src="images/redcard.png" id="t6" onclick="getTopImage('t6', 6)">
-          <td><img src="images/redcard.png" id="t7" onclick="getTopImage('t7', 7)">
-          <td><img src="images/redcard.png" id="t8" onclick="getTopImage('t8', 8)">
-          <td><img src="images/redcard.png" id="t9" onclick="getTopImage('t9', 9)">
-        </tr>
-      </table>
+	<header>
+		<a href="index.html" id="logo" class="grow"></a>
+		<nav>
+			<ul>
+				<li><a href="index.html" class="current">Home</a></li>
+				<li><a href="greg.html">About this Site</a></li>
+				<li><a href="playagame.html">Play a Game</a></li>
+				<li><a href="aboutyou.html">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="spacer">&nbsp;</div>
+	<main>
+		<h1>Greg's Concentration</h1>
+
+		<div class="container">
+			<div id="content">
+				<p id="conInstruct">Select a red card and try to match the image to a blue card.</p>
+		    <div id="pictures">
+		      <table align="center" border="1" id="conTableTop">
+		        <tr>
+		          <td colspan="6">Click a card to reveal an image.</td>
+		        </tr>
+		        <tr>
+		          <td><img src="images/redcard.png" id="t0" onclick="getTopImage('t0', 0)">
+		          <td><img src="images/redcard.png" id="t1" onclick="getTopImage('t1', 1)">
+		          <td><img src="images/redcard.png" id="t2" onclick="getTopImage('t2', 2)">
+		          <td><img src="images/redcard.png" id="t3" onclick="getTopImage('t3', 3)">
+		          <td><img src="images/redcard.png" id="t4" onclick="getTopImage('t4', 4)">
+		        </tr>
+		        <tr>
+		          <td><img src="images/redcard.png" id="t5" onclick="getTopImage('t5', 5)">
+		          <td><img src="images/redcard.png" id="t6" onclick="getTopImage('t6', 6)">
+		          <td><img src="images/redcard.png" id="t7" onclick="getTopImage('t7', 7)">
+		          <td><img src="images/redcard.png" id="t8" onclick="getTopImage('t8', 8)">
+		          <td><img src="images/redcard.png" id="t9" onclick="getTopImage('t9', 9)">
+		        </tr>
+		      </table>
+		    </div>
+		    <div id="matches">
+		      <table align="center" cellpadding="10" border="1" id="conTableBottom">
+		        <tr>
+		          <td colspan="6">Now click on a card to try to match the image.</td>
+		        </tr>
+		        <tr>
+		          <td><img src="images/bluecard.png" id="b0" onclick="getBottomImage('b0', 0)">
+		          <td><img src="images/bluecard.png" id="b1" onclick="getBottomImage('b1', 1)">
+		          <td><img src="images/bluecard.png" id="b2" onclick="getBottomImage('b2', 2)">
+		          <td><img src="images/bluecard.png" id="b3" onclick="getBottomImage('b3', 3)">
+		          <td><img src="images/bluecard.png" id="b4" onclick="getBottomImage('b4', 4)">
+		        </tr>
+		        <tr>
+		          <td><img src="images/bluecard.png" id="b5" onclick="getBottomImage('b5', 5)">
+		          <td><img src="images/bluecard.png" id="b6" onclick="getBottomImage('b6', 6)">
+		          <td><img src="images/bluecard.png" id="b7" onclick="getBottomImage('b7', 7)">
+		          <td><img src="images/bluecard.png" id="b8" onclick="getBottomImage('b8', 8)">
+		          <td><img src="images/bluecard.png" id="b9" onclick="getBottomImage('b9', 9)">
+		        </tr>
+		      </table>
+		      <div>
+		        <div id="theEnd">
+							<h2 id="theEndH2">&nbsp;</h2>
+							<p id="theEndP">&nbsp;</p>
+						</div>
+		      </div>
+		    </div>
+			</div>
     </div>
-    <div id="matches">
-      <table align="center" cellpadding="10" border="1" id="conTableBottom">
-        <tr>
-          <td colspan="6">Now click on a card to try to match the image.</td>
-        </tr>
-        <tr>
-          <td><img src="images/bluecard.png" id="b0" onclick="getBottomImage('b0', 0)">
-          <td><img src="images/bluecard.png" id="b1" onclick="getBottomImage('b1', 1)">
-          <td><img src="images/bluecard.png" id="b2" onclick="getBottomImage('b2', 2)">
-          <td><img src="images/bluecard.png" id="b3" onclick="getBottomImage('b3', 3)">
-          <td><img src="images/bluecard.png" id="b4" onclick="getBottomImage('b4', 4)">
-        </tr>
-        <tr>
-          <td><img src="images/bluecard.png" id="b5" onclick="getBottomImage('b5', 5)">
-          <td><img src="images/bluecard.png" id="b6" onclick="getBottomImage('b6', 6)">
-          <td><img src="images/bluecard.png" id="b7" onclick="getBottomImage('b7', 7)">
-          <td><img src="images/bluecard.png" id="b8" onclick="getBottomImage('b8', 8)">
-          <td><img src="images/bluecard.png" id="b9" onclick="getBottomImage('b9', 9)">
-        </tr>
-      </table>
-      <div>
-        <div id="theEnd">
-					<h2 id="theEndH2">&nbsp;</h2>
-					<p id="theEndP">&nbsp;</p>
-				</div>
-      </div>
-    </div>
-	</div>
-	<div id="footer">Copyright &copy; 2016 Greg's Gambits<br /> <a href="mailto:mike@ggambits.com"> mike@ggambits.com</a>
-	</div>
-</div>
+		<br>
+	<footer>
+		<p>Copyright &copy; 2016 Greg's Gambits | <a href="mailto:mike@ggambits.com">mike@ggambits.com</a></p>
+		<br>
+		<br>
+	</footer>
+
 </body>
 </html>

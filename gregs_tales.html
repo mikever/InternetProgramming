@@ -1,73 +1,86 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Greg's Gambits | Greg's Tales</title>
-<link href="greg.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript">
-		function start_game()
-		{
-			var gender = "boy";
-			var city = " ";
-			var monster = " ";
-			var food = " ";
-			var drink = " ";
-			numYears = prompt("Enter a number greater than 0: ");
-			gender = prompt("Is the story about a boy or a girl? ");
-			letter = gender.charAt(0);
-			gender = (letter == "b" || letter == "B")?"boy":"girl";
-			pronoun = (gender == "boy")?"he":"she";
-			name = prompt("Enter the hero's name: ");
-			city = prompt("Enter the name of the city: ");
-			monster = prompt("Enter a type of monster: ");
-			food = prompt("Enter a food that you like: ");
-			drink = prompt("Enter a drink that you like: ");
-			document.getElementById("content").innerHTML = ("Once upon a time, about " + numYears + " years ago, there was a " + gender + " named " + name + ". " + name + " lived in a small cabin in the woods just outside " + city + " limits.</p> <p>" + name + " enjoyed walking in the woods every morning, until ... one day " + pronoun + " came upon a " + monster + " sitting on a log eating a " + food + ".</p> <p>The " + monster + " jumped up, spilling his " + drink + ". " + name + " ran home as fast as " + pronoun + " could but the " + monster + " followed and ... </p> <h3>What happened? You decide!</h3> <p> Ending 1: The " + monster + " and " + name + " became best friends and lived in " + name + "'s house happily every after.</p> <p>Ending 2: The " + monster + " overpowered " + name + " and gobbled down all the " + food + " and " + drink + " in " + name + "'s refrigerator.</p> <p>Ending 3: " + name + " screamed mean things at the " + monster + ", causing the " + monster + " to turn and run back to the woods, never to be seen again.</p>");
-		}
+	<meta charset="UTF-8">
+	<title>Greg's Gambits</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="gregnew.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<script type="text/javascript">
+			function start_game()
+			{
+				var gender = "boy";
+				var city = " ";
+				var monster = " ";
+				var food = " ";
+				var drink = " ";
+				numYears = prompt("Enter a number greater than 0: ");
+				gender = prompt("Is the story about a boy or a girl? ");
+				letter = gender.charAt(0);
+				gender = (letter == "b" || letter == "B")?"boy":"girl";
+				pronoun = (gender == "boy")?"he":"she";
+				name = prompt("Enter the hero's name: ");
+				city = prompt("Enter the name of the city: ");
+				monster = prompt("Enter a type of monster: ");
+				food = prompt("Enter a food that you like: ");
+				drink = prompt("Enter a drink that you like: ");
+				document.getElementById("content").innerHTML = ("Once upon a time, about " + numYears + " years ago, there was a " + gender + " named " + name + ". " + name + " lived in a small cabin in the woods just outside " + city + " limits.</p> <p>" + name + " enjoyed walking in the woods every morning, until ... one day " + pronoun + " came upon a " + monster + " sitting on a log eating a " + food + ".</p> <p>The " + monster + " jumped up, spilling his " + drink + ". " + name + " ran home as fast as " + pronoun + " could but the " + monster + " followed and ... </p> <h3>What happened? You decide!</h3> <p> Ending 1: The " + monster + " and " + name + " became best friends and lived in " + name + "'s house happily every after.</p> <p>Ending 2: The " + monster + " overpowered " + name + " and gobbled down all the " + food + " and " + drink + " in " + name + "'s refrigerator.</p> <p>Ending 3: " + name + " screamed mean things at the " + monster + ", causing the " + monster + " to turn and run back to the woods, never to be seen again.</p>");
+			}
 
-		function start_game2()
-		{
-			var name = " ";
-			var gender = " ";
-			var adjective = " ";
-			var instrument = " ";
-			var number = " ";
-			var verb = " ";
+			function start_game2()
+			{
+				var name = " ";
+				var gender = " ";
+				var adjective = " ";
+				var instrument = " ";
+				var number = " ";
+				var verb = " ";
 
-			name = prompt("What is the name of the hero? ");
-			gender = prompt("Is the story about a boy or a girl? ");
-			var letter = gender.charAt(0);
-			gender = (letter == "b" || letter == "B")?"boy":"girl";
-			var pronoun = (gender == "boy")?"he":"she";
-			adjective = prompt("Pick an adjective: ");
-			instrument = prompt("Pick an instrument: ");
-			number = prompt("Pick a whole number: ");
-			verb = prompt("Pick an action verb (something you do to someone else): ");
+				name = prompt("What is the name of the hero? ");
+				gender = prompt("Is the story about a boy or a girl? ");
+				var letter = gender.charAt(0);
+				gender = (letter == "b" || letter == "B")?"boy":"girl";
+				var pronoun = (gender == "boy")?"he":"she";
+				adjective = prompt("Pick an adjective: ");
+				instrument = prompt("Pick an instrument: ");
+				number = prompt("Pick a whole number: ");
+				verb = prompt("Pick an action verb (something you do to someone else): ");
 
-			document.getElementById("content").innerHTML = ("Once upon a time, " + name + " was relaxing in the park, playing a " + adjective + " " + instrument + ". </p> <p>Suddenly, " + pronoun + " looked up and saw a bully walking closer. In fact, " + pronoun + " saw " + number + " of them! </p> <p>One bully walked up and tried to grab the " + instrument + " from " + name + ". Instead, " + pronoun + " decided to " + verb + " that bully. Then " + pronoun + " played the " + adjective + " " + instrument + " as loud as " + pronoun + " could, and scared all " + number + " of the bullys away. The End.</p>");
-		}
-</script>
+				document.getElementById("content").innerHTML = ("Once upon a time, " + name + " was relaxing in the park, playing a " + adjective + " " + instrument + ". </p> <p>Suddenly, " + pronoun + " looked up and saw a bully walking closer. In fact, " + pronoun + " saw " + number + " of them! </p> <p>One bully walked up and tried to grab the " + instrument + " from " + name + ". Instead, " + pronoun + " decided to " + verb + " that bully. Then " + pronoun + " played the " + adjective + " " + instrument + " as loud as " + pronoun + " could, and scared all " + number + " of the bullys away. The End.</p>");
+			}
+	</script>
 </head>
-
 <body>
-<div id="container">
-	 <img src="images/superhero.jpg" class="floatleft" />
-	 <h1 id="logo"><em>Greg's Tales</em></h1>
-	 <h3>For this game, you will create a story by entering words as prompted. The story will change each time you run this game, as you enter different words.</h3>
-	 <div id="nav">
-	 	  <p><a href="index.html">Home</a>
-	 	  <a href="greg.html">About Greg</a>
-	 	  <a href="playagame.html">Play a Game</a>
-	 	  <a href="sign.html">Sign In</a>
-	 	  <a href="contact.html">Contact Us</a></p>
-	</div>
-	<div id="content">
-		 <input type="button" value = "click for story 1" onclick="start_game()" />
-		 <br>
-		 <br>
-		 <input type="button" value = "click for story 2" onclick="start_game2()" />
-	</div>
-	<div id="footer">Copyright &copy; 2013 Greg's Gambits<br /> <a href="mailto:yourfirstname@yourlastname.com"> yourfirstname@yourlastname.com</a>
-	</div>
-</div>
+	<header>
+		<a href="index.html" id="logo" class="grow"></a>
+		<nav>
+			<ul>
+				<li><a href="index.html" class="current">Home</a></li>
+				<li><a href="greg.html">About this Site</a></li>
+				<li><a href="playagame.html">Play a Game</a></li>
+				<li><a href="aboutyou.html">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="spacer">&nbsp;</div>
+	<main>
+		<h1>Greg's Tales</h1>
+		<p>For this game, you will create a story by entering words as prompted. The story will change each time you run this game, as you enter different words.</p>
+		<br>
+		<div class="container">
+			<input type="button" value = "click for story 1" class="buttons" onclick="start_game()">
+			<br>
+			<br>
+			<input type="button" value = "click for story 2" class="buttons" onclick="start_game2()">
+		</div>
+		<br>
+		<div id="content">&nbsp;</div>
+		<br>
+	<footer>
+		<p>Copyright &copy; 2016 Greg's Gambits | <a href="mailto:mike@ggambits.com">mike@ggambits.com</a></p>
+		<br>
+		<br>
+	</footer>
+
 </body>
 </html>

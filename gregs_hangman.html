@@ -1,34 +1,49 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Greg's Gambits | Hangman</title>
-<link href="greg.css" rel="stylesheet" type="text/css" />
+	<meta charset="UTF-8">
+	<title>Greg's Gambits</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="gregnew.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <script type="text/javascript" src="js/hangman.js"></script>
-<script type="text/javascript">
-</script>
 </head>
-
 <body>
-<div id="container">
-	 <img src="images/superhero.jpg" class="floatleft" />
-	 <h1 id="logo"><em>Hangman</em></h1>
-	 <div id="nav">
-	 	  <p><a href="index.html">Home</a>
-	 	  <a href="greg.html">About Greg</a>
-	 	  <a href="playagame.html">Play a Game</a>
-	 	  <a href="sign.html">Sign In</a>
-	 	  <a href="contact.html">Contact Us</a></p>
-	</div>
-	<div id="content">
-    <p><input type="button" value="Start the game" onclick="startHangman();"></p>
-    <div id="noose" class="floatright">
-      <img src="images/hangman10.gif" alt="hangman">
+	<header>
+		<a href="index.html" id="logo" class="grow"></a>
+		<nav>
+			<ul>
+				<li><a href="index.html" class="current">Home</a></li>
+				<li><a href="greg.html">About this Site</a></li>
+				<li><a href="playagame.html">Play a Game</a></li>
+				<li><a href="aboutyou.html">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="spacer">&nbsp;</div>
+	<main>
+		<h1>Hangman</h1>
+		<h2 class="centeredh2">Try to guess the word before your chances run out</h2>
+		<br>
+		<div class="container">
+			<div id="content">
+		    <div id="noose" class="floatright">
+		      <img src="images/hangman10.gif" alt="hangman">
+		    </div>
+		    <div id="game"><p>&nbsp;</p></div>
+		    <div id="result"><p>&nbsp;</p></div>
+			</div>
     </div>
-    <div id="game"><p>&nbsp;</p></div>
-    <div id="result"><p>&nbsp;</p></div>
-	</div>
-	<div id="footer">Copyright &copy; 2016 Greg's Gambits<br /> <a href="mailto:mike@ggambits.com"> mike@ggambits.com</a>
-	</div>
-</div>
+		<br>
+		<div class="container">
+			<p><input type="button" class="buttons" value="Start the game" onclick="startHangman();"></p>
+		</div>
+		<br>
+	<footer>
+		<p>Copyright &copy; 2016 Greg's Gambits | <a href="mailto:mike@ggambits.com">mike@ggambits.com</a></p>
+		<br>
+		<br>
+	</footer>
+
 </body>
 </html>

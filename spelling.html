@@ -1,91 +1,106 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Greg's Gambits | Spelling</title>
-<link href="greg.css" rel="stylesheet" type="text/css" />
+	<meta charset="UTF-8">
+	<title>Greg's Gambits</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="gregnew.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <script type="text/javascript" src="js/spelling.js"></script>
-<script type="text/javascript">
-
-</script>
 </head>
-
 <body onload="setup()">
-<div id="container">
-	 <img src="images/superhero.jpg" class="floatleft" />
-	 <h1 id="logo"><em>Greg's Spelling Game</em></h1>
-	 <div id="nav">
-	 	  <p><a href="index.html">Home</a>
-	 	  <a href="greg.html">About Greg</a>
-	 	  <a href="playagame.html">Play a Game</a>
-	 	  <a href="sign.html">Sign In</a>
-	 	  <a href="contact.html">Contact Us</a></p>
-	</div>
-	<div id="content">
-		<p>Match the picture with the correct spelling of its name.</p>
-    <div id="pictures">
-      <table align="center" border="1">
-        <tr>
-          <td colspan="6">Click on the little button below a picture.</td>
-        </tr>
-        <tr>
-          <td id="ibananas"><img src="images/bananas.jpg" alt="">
-            <button onclick="getImage('ibananas')">Click</button></td>
-          <td id="iwizard"><img src="images/wizard.jpg" alt="">
-            <button onclick="getImage('iwizard')">Click</button></td>
-          <td id="isword"><img src="images/sword.jpg" alt="">
-            <button onclick="getImage('isword')">Click</button></td>
-          <td id="ibracelet"><img src="images/bracelet.jpg" alt="">
-            <button onclick="getImage('ibracelet')">Click</button></td>
-          <td id="ihorse"><img src="images/horse.jpg" alt="">
-            <button onclick="getImage('ihorse')">Click</button></td>
-          <td id="ilawnmower"><img src="images/lawnmower.jpg" alt="">
-            <button onclick="getImage('ilawnmower')">Click</button></td>
-        </tr>
-        <tr>
-          <td id="ighost"><img src="images/ghost.jpg" alt="">
-            <button onclick="getImage('ighost')">Click</button></td>
-          <td id="icastle"><img src="images/castle.jpg" alt="">
-            <button onclick="getImage('icastle')">Click</button></td>
-          <td id="irabbit"><img src="images/rabbit.jpg" alt="">
-            <button onclick="getImage('irabbit')">Click</button></td>
-          <td id="inecklace"><img src="images/necklace.jpg" alt="">
-            <button onclick="getImage('inecklace')">Click</button></td>
-          <td id="icelery"><img src="images/celery.jpg" alt="">
-            <button onclick="getImage('icelery')">Click</button></td>
-          <td id="iflowers"><img src="images/flowers.jpg" alt="">
-            <button onclick="getImage('iflowers')">Click</button></td>
-        </tr>
-      </table>
+	<header>
+		<a href="index.html" id="logo" class="grow"></a>
+		<nav>
+			<ul>
+				<li><a href="index.html" class="current">Home</a></li>
+				<li><a href="greg.html">About this Site</a></li>
+				<li><a href="playagame.html">Play a Game</a></li>
+				<li><a href="aboutyou.html">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="spacer">&nbsp;</div>
+	<main>
+		<h1>Word Match</h1>
+		<h2 class="centeredh2">Match the picture to the word</h2>
+		<div class="container">
+			<div id="content">
+		    <div id="pictures">
+		      <table align="center" border="1" class="spellingTable">
+		        <tr>
+		          <td colspan="6">Click on the little button below a picture.</td>
+		        </tr>
+						<tr>
+							<td>&nbsp;</td>
+						</tr>
+		        <tr>
+		          <td id="ibananas"><img src="images/bananas.jpg" alt="">
+		            <button class="buttons" onclick="getImage('ibananas')">Click</button></td>
+		          <td id="iwizard"><img src="images/wizard.jpg" alt="">
+		            <button class="buttons" onclick="getImage('iwizard')">Click</button></td>
+		          <td id="isword"><img src="images/sword.jpg" alt="">
+		            <button class="buttons" onclick="getImage('isword')">Click</button></td>
+		          <td id="ibracelet"><img src="images/bracelet.jpg" alt="">
+		            <button class="buttons" onclick="getImage('ibracelet')">Click</button></td>
+		          <td id="ihorse"><img src="images/horse.jpg" alt="">
+		            <button class="buttons" onclick="getImage('ihorse')">Click</button></td>
+		          <td id="ilawnmower"><img src="images/lawnmower.jpg" alt="">
+		            <button class="buttons" onclick="getImage('ilawnmower')">Click</button></td>
+		        </tr>
+		        <tr>
+		          <td id="ighost"><img src="images/ghost.jpg" alt="">
+		            <button class="buttons" onclick="getImage('ighost')">Click</button></td>
+		          <td id="icastle"><img src="images/castle.jpg" alt="">
+		            <button class="buttons" onclick="getImage('icastle')">Click</button></td>
+		          <td id="irabbit"><img src="images/rabbit.jpg" alt="">
+		            <button class="buttons" onclick="getImage('irabbit')">Click</button></td>
+		          <td id="inecklace"><img src="images/necklace.jpg" alt="">
+		            <button class="buttons" onclick="getImage('inecklace')">Click</button></td>
+		          <td id="icelery"><img src="images/celery.jpg" alt="">
+		            <button class="buttons" onclick="getImage('icelery')">Click</button></td>
+		          <td id="iflowers"><img src="images/flowers.jpg" alt="">
+		            <button class="buttons" onclick="getImage('iflowers')">Click</button></td>
+		        </tr>
+		      </table>
+		    </div>
+		    <div id="spellings">
+		      <table align="center" cellpadding="10" border="1" class="spellingTable">
+		        <tr>
+		          <td colspan="6">Now click on the spelling that matches the picture.</td>
+		        </tr>
+						<tr>
+							<td>&nbsp;</td>
+						</tr>
+		        <tr>
+		          <td id="scelery">celery<button class="buttons" onclick="getSpell('scelery')">Click</td>
+		          <td id="slawnmower">lawnmower<button class="buttons" onclick="getSpell('slawnmower')">Click</td>
+		          <td id="scastle">castle<button class="buttons" onclick="getSpell('scastle')">Click</td>
+		          <td id="shorse">horse<button class="buttons" onclick="getSpell('shorse')">Click</td>
+		          <td id="sbananas">bananas<button class="buttons" onclick="getSpell('sbananas')">Click</td>
+		          <td id="sflowers">flowers<button class="buttons" onclick="getSpell('sflowers')">Click</td>
+		        </tr>
+		        <tr>
+		          <td id="swizard">wizard<button class="buttons" onclick="getSpell('swizard')">Click</td>
+		          <td id="snecklace">necklace<button class="buttons" onclick="getSpell('snecklace')">Click</td>
+		          <td id="sbracelet">bracelet<button class="buttons" onclick="getSpell('sbracelet')">Click</td>
+		          <td id="sghost">ghost<button class="buttons" onclick="getSpell('sghost')">Click</td>
+		          <td id="srabbit">rabbit<button class="buttons" onclick="getSpell('srabbit')">Click</td>
+		          <td id="ssword">sword<button class="buttons" onclick="getSpell('ssword')">Click</td>
+		        </tr>
+		      </table>
+		      <div>
+		        <div id="theEnd">&nbsp;</div>
+		      </div>
+		    </div>
+			</div>
     </div>
-    <div id="spellings">
-      <table align="center" cellpadding="10" border="1">
-        <tr>
-          <td colspan="6">Now click on the spelling that matches the picture.</td>
-        </tr>
-        <tr>
-          <td id="scelery">celery<button onclick="getSpell('scelery')">Click</td>
-          <td id="slawnmower">lawnmower<button onclick="getSpell('slawnmower')">Click</td>
-          <td id="scastle">castle<button onclick="getSpell('scastle')">Click</td>
-          <td id="shorse">horse<button onclick="getSpell('shorse')">Click</td>
-          <td id="sbananas">bananas<button onclick="getSpell('sbananas')">Click</td>
-          <td id="sflowers">flowers<button onclick="getSpell('sflowers')">Click</td>
-        </tr>
-        <tr>
-          <td id="swizard">wizard<button onclick="getSpell('swizard')">Click</td>
-          <td id="snecklace">necklace<button onclick="getSpell('snecklace')">Click</td>
-          <td id="sbracelet">bracelet<button onclick="getSpell('sbracelet')">Click</td>
-          <td id="sghost">ghost<button onclick="getSpell('sghost')">Click</td>
-          <td id="srabbit">rabbit<button onclick="getSpell('srabbit')">Click</td>
-          <td id="ssword">sword<button onclick="getSpell('ssword')">Click</td>
-        </tr>
-      </table>
-      <div>
-        <div id="theEnd">&nbsp;</div>
-      </div>
-    </div>
-	</div>
-	<div id="footer">Copyright &copy; 2016 Greg's Gambits<br /> <a href="mailto:mike@ggambits.com"> mike@ggambits.com</a>
-	</div>
-</div>
+		<br>
+	<footer>
+		<p>Copyright &copy; 2016 Greg's Gambits | <a href="mailto:mike@ggambits.com">mike@ggambits.com</a></p>
+		<br>
+		<br>
+	</footer>
+
 </body>
 </html>

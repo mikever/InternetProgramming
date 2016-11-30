@@ -1,36 +1,49 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Greg's Gambits | Battle the Evil Troll</title>
-<link href="greg.css" rel="stylesheet" type="text/css" />
+	<meta charset="UTF-8">
+	<title>Greg's Gambits</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="gregnew.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <script type="text/javascript">
-		
+
 </script>
 </head>
-
 <body>
-<div id="container">
-	 <img src="images/superhero.jpg" class="floatleft" />
-	 <h1 id="logo"><em>Battle the Evil Troll</em></h1>
-	 <div id="nav">
-	 	  <p><a href="index.html">Home</a>
-	 	  <a href="greg.html">About Greg</a>
-	 	  <a href="playagame.html">Play a Game</a>
-	 	  <a href="sign.html">Sign In</a>
-	 	  <a href="contact.html">Contact Us</a></p>
-	</div>
-	<div id="content">
-		<table width="85%" cellspacing="0" cellpadding="5" border="0" id="battleTable">
-			<tr><td colspan="4"><span class="style1">In this game you will battle the evil troll. You can choose your weapon from the three shown &mdash; a set of magic rocks that are a lot stronger and heavier than they look, an extremely sharp sword, or a crossbow and bolt. Unfortunately, you do not know ahead of time which weapon the troll will use. You each begin with 100 points. For each round of the battle, the winner takes 10 points from the loser. When either of you reaches 200 points, the battle is over and one of you will lie dead. The winner is determined by the list shown below. Push the button when you are ready to begin the battle, and good luck!</span></td></tr>
-			<tr><td width="20%"><p><img src="images/wizard.jpg"></p> <p><span class="style1">Wizard</span></p></td>
-			<td width="20%"><p><img src="images/troll.jpg"></p> <p><span class="style1">Troll</span></p></td>
-			<td width="10%">&nbsp;</td>
-			<td width="50%"> <span class="style1"><p>Weapons</p> <p><img src="images/rock.jpg" width="100" height="70">magic rocks</p> <p><img src="images/sword.jpg" width="100" height="70">sword</p> <p><img src="images/crossbow.jpg" width="100" height="70">crossbow and bolt</p></span></td></tr>
-			<tr><td colspan="4"><span class="style1">Note:<br>The rocks can deflect the bolt.<br>The sword beats the rocks.<br>The bolt beats the sword.</span><br><br><input type="button" id="battle" value="Begin the battle!" onclick="location.href = 'battleground.html'";></td></tr>
-		</table>
-	</div>
-	<div id="footer">Copyright &copy; 2016 Greg's Gambits<br /> <a href="mailto:mike@ggambits.com"> mike@ggambits.com</a>
-	</div>
-</div>
+	<header>
+		<a href="index.html" id="logo" class="grow"></a>
+		<nav>
+			<ul>
+				<li><a href="index.html" class="current">Home</a></li>
+				<li><a href="greg.html">About this Site</a></li>
+				<li><a href="playagame.html">Play a Game</a></li>
+				<li><a href="aboutyou.html">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="spacer">&nbsp;</div>
+	<main>
+		<h1>Battle the Evil Troll</h1>
+		<div class="container">
+			<div id="content">
+				<table width="85%" cellspacing="0" cellpadding="5" border="0" id="battleTable">
+					<tr><td colspan="4"><span class="style1">In this game you will battle the evil troll. You can choose your weapon from the three shown &mdash; a set of magic rocks that are a lot stronger and heavier than they look, an extremely sharp sword, or a crossbow and bolt. Unfortunately, you do not know ahead of time which weapon the troll will use. You each begin with 100 points. For each round of the battle, the winner takes 10 points from the loser. When either of you reaches 200 points, the battle is over and one of you will lie dead. The winner is determined by the list shown below. Push the button when you are ready to begin the battle, and good luck!</span></td></tr>
+					<tr><td width="20%"><p><img src="images/wizard.jpg"></p> <p><span class="style1">Wizard</span></p></td>
+					<td width="20%"><p><img src="images/troll.jpg"></p> <p><span class="style1">Troll</span></p></td>
+					<td width="10%">&nbsp;</td>
+					<td width="50%"> <span class="style1"><p>Weapons</p> <p><img src="images/rock.jpg" width="100" height="70">magic rocks</p> <p><img src="images/sword.jpg" width="100" height="70">sword</p> <p><img src="images/crossbow.jpg" width="100" height="70">crossbow and bolt</p></span></td></tr>
+					<tr><td colspan="4"><span class="style1">Note:<br>The rocks can deflect the bolt.<br>The sword beats the rocks.<br>The bolt beats the sword.</span><br><br></td></tr>
+				</table>
+			</div>
+			<input type="button" class="buttons" id="battle" value="Begin the battle!" onclick="location.href = 'battleground.html'";>
+    </div>
+		<br>
+	<footer>
+		<p>Copyright &copy; 2016 Greg's Gambits | <a href="mailto:mike@ggambits.com">mike@ggambits.com</a></p>
+		<br>
+		<br>
+	</footer>
+
 </body>
 </html>
