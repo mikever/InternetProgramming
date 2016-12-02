@@ -280,11 +280,13 @@ table {
 }
 
 #ticTacToeResult {
-	color: white;
+	color: rgb(65, 65, 65);
+	text-align: center;
 }
 
 #ticTacToeResult p {
 	color: #AA4C4C;
+	text-align: center;
 }
 
 .yellow {
@@ -414,7 +416,6 @@ table {
 .spellingTable {
 	max-width: 650px;
 }
-
 
 
 /*  Made with <a href="http://logomakr.com" title="Logo Maker">Logo Maker</a> */

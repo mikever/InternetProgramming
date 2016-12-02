@@ -48,7 +48,7 @@
 					document.getElementById("ticTacToeResult").innerHTML = "<p>Tic Tac Toe!</p> Player '" + winner + "' is the winner!";
 					gameWon = true;
 				} else if ((gameWon === false) && ((document.getElementById("box1-1").value.length === 1) && (document.getElementById("box1-2").value.length === 1) && (document.getElementById("box1-3").value.length === 1) && (document.getElementById("box2-1").value.length === 1) && (document.getElementById("box2-2").value.length === 1) && (document.getElementById("box2-3").value.length === 1) && (document.getElementById("box3-1").value.length === 1) && (document.getElementById("box3-2").value.length === 1) && (document.getElementById("box3-3").value.length === 1))) {
-					document.getElementById("ticTacToeResult").innerHTML = "<p>It's a tie</p> Please try again.";
+					document.getElementById("ticTacToeResult").innerHTML = "<p>It's a tie</p> <p>Please try again.</p>";
 				}
 			}
 
@@ -91,56 +91,57 @@
 				<tr>
 					<td>
 						<input type="text" id="box1-1" class="inputBoxes" name="box1" value="" size="1"></input>
-						<a href="JavaScript:play('box1-1')" class="playButton"><img src="images/play.png" width="65px"></a>
+						<button type="button" class="buttons" onclick="play('box1-1')">Click</button>
 					<td>
 						<input type="text" id="box1-2" name="box1" value="" size="1"></input>
-						<a href="JavaScript:play('box1-2')" class="playButton"><img src="images/play.png" width="65px"></a>
+						<button type="button" class="buttons" onclick="play('box1-2')">Click</button>
 					</td>
 					<td>
 						<input type="text" id="box1-3" name="box1" value="" size="1"></input>
-						<a href="JavaScript:play('box1-3')" class="playButton"><img src="images/play.png" width="65px"></a>
+						<button type="button" class="buttons" onclick="play('box1-3')">Click</button>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						<input type="text" id="box2-1" name="box1" value="" size="1"></input>
-						<a href="JavaScript:play('box2-1')" class="playButton"><img src="images/play.png" width="65px"></a>
+						<button type="button" class="buttons" onclick="play('box2-1')">Click</button>
 					</td>
 					<td>
 						<input type="text" id="box2-2" name="box1" value="" size="1"></input>
-						<a href="JavaScript:play('box2-2')" class="playButton"><img src="images/play.png" width="65px"></a>
+						<button type="button" class="buttons" onclick="play('box2-2')">Click</button>
 					</td>
 					<td>
 						<input type="text" id="box2-3" name="box1" value="" size="1"></input>
-						<a href="JavaScript:play('box2-3')" class="playButton"><img src="images/play.png" width="65px"></a>
+						<button type="button" class="buttons" onclick="play('box2-3')">Click</button>
 					</td>
 				</tr>
 				<tr>
 					<td>
 						<input type="text" id="box3-1" name="box1" value="" size="1"></input>
-						<a href="JavaScript:play('box3-1')" class="playButton"><img src="images/play.png" width="65px"></a>
+						<button type="button" class="buttons" onclick="play('box3-1')">Click</button>
 					</td>
 					<td>
 						<input type="text" id="box3-2" name="box1" value="" size="1"></input>
-						<a href="JavaScript:play('box3-2')" class="playButton"><img src="images/play.png" width="65px"></a>
+						<button type="button" class="buttons" onclick="play('box3-2')">Click</button>
 					</td>
 					<td>
 						<input type="text" id="box3-3" name="box1" value="" size="1"></input>
-						<a href="JavaScript:play('box3-3')" class="playButton"><img src="images/play.png" width="65px"></a>
+						<button type="button" class="buttons" onclick="play('box3-3')">Click</button>
 					</td>
 				</tr>
 				<tr><td></td></tr>
-				<tr>
-					<td>&nbsp;</td>
-					<td colspan="4"><input type="button" class="buttons" id="reloadPage" value="Restart the Game" onclick="location.href='tictactoe.html'"></td>
-				</tr>
-
-
 			</table>
-
-			<h2 id="ticTacToeResult"><p>&nbsp;</p>&nbsp;</h2>
-		// </div>
+			<div class="container">
+				<input type="button" class="buttons" value="Restart the Game" onclick="location.href='tictactoe.html'">
+			</div>
+			</div>
+			<br>
+			<br/>
     </div>
+		<div class="container">
+			<h2 id="ticTacToeResult"></h2>
+		</div>
+
 		<br>
 	<footer>
 		<p>Copyright &copy; 2016 Greg's Gambits | <a href="mailto:mike@ggambits.com">mike@ggambits.com</a></p>
